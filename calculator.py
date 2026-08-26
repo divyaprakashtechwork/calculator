@@ -1,23 +1,14 @@
-def Addition(a,b):
+def Addition(a,op,b):
     return a+b
-def Subtraction(a,b):
+def Subtraction(a,op,b):
     return a-b
-def Multiplication(a,b):
+def Multiplication(a,op,b):
     return a*b
-def floor_division(a,b):
-    if b == 0:
-        print("undefined")
-        return
+def floor_division(a,op,b):
     return a//b
-def division(a,b):
-    if b ==0:
-        print("Undefined")
-        return
+def division(a,op,b):
     return a/b
-def Modulus(a,b):
-    if b==0:
-        print("Undefined")
-        return
+def Modulus(a,op,b):
     return a%b
 
 a=float(input("Enter number 1 : "))
@@ -27,26 +18,15 @@ b=float(input("Enter number 2 : "))
 
 
 if operator=='+':
-        print(a,'+',b," = ",end=" ")
-        print(Addition(a,b))
+        print(Addition(a,operator,b))
 elif operator=='-':
-    print(a,'-',b," = ",end=" ")
-    print(Subtraction(a,b))
+    print(Subtraction(a,operator,b))
 elif operator=='*':
-    print(a,'*',b," = ",end=" ")
-    print(Multiplication(a,b))
+    print(Multiplication(a,operator,b))
 elif operator=='//':
-    print(a,'//',b," = ",end=" ")
-    print(floor_division(a,b))
+    print(floor_division(a,operator,b))
 elif operator=='/':
-    print(a,'/',b," = ",end=" ")
-    print(division(a,b))
+    print(division(a,operator,b))
 elif operator=='%':
-    print(a,'%',b," = ",end=" ")
-    print(Modulus(a,b))
-else:
-    print("Invalid operation")
-    
-
-
-        
+    print(Modulus(a,operator,b))
+     
